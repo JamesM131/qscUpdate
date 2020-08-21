@@ -1,0 +1,37 @@
+white = #ffffff;
+main_blue = #0c8293;
+dark_blue = #03324f;
+grey = #7e909f;
+brown = #93540c;
+dark_red = #93110c;
+off_grey = #9f8a7e;
+primary = #0c8293;
+secondary = #03324f;
+colours = {
+    white: #ffffff,
+    main_blue: #0c8293,
+    dark_blue: #03324f,
+    grey: #7e909f,
+    brown: #93540c,
+    dark_red: #93110c,
+    off_grey: #9f8a7e,
+    primary: #0c8293,
+    secondary: #03324f
+};
+
+for name, colour in colours {
+    .make--{name} {
+        background-color: colour !important;
+    }
+}
+
+for name, colour in colours {
+    button.make--{name} {
+        background-color: colour !important;
+        color: white;
+    }
+}
+
+.make--pointer {
+    cursor: pointer;
+}

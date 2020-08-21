@@ -1,0 +1,96 @@
+<template>
+  <div class="tw-overflow-hidden">
+    <v-row justify="center" align="center">
+      <v-col cols="auto">
+        <img src="~/assets/logo.png" alt="Queen's Square Chambers Logo" />
+      </v-col>
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="9" class="pb-0 mt-4 tw-mb-4">
+        <v-card class="mt-2 tw-px-10 tw-py-4 tw-bg-gray-100 min_height">
+          <h1 class="text-center tw-font-extrabold tw-text-2xl tw-mb-3">
+            Welcome
+          </h1>
+          <!-- eslint-disable  -->
+          <p class="tw-text-gray-800" v-html="home"></p>
+          <!-- eslint-enable -->
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row class="tw-pb-4" align="center" justify="center">
+      <v-col
+        v-for="(card, key) in navigation_cards"
+        :key="key"
+        class="tw-px-10"
+        cols="12"
+        md="4"
+      >
+        <navigation-card :image="card.image" :path="card.path">{{
+          key
+        }}</navigation-card>
+      </v-col>
+    </v-row>
+  </div>
+</template>
+
+<script>
+import axios from 'axios'
+import NavigationCard from '~/components/NavigationCard'
+
+export default {
+  components: {
+    NavigationCard,
+  },
+  async fetch() {
+    await axios
+      .get('https://api.qsc.com.au/index.php?rest_route=/wp/v2/posts')
+      .then((res) => {
+        const WelcomePost = res.data.filter(
+          (post) => post.slug === 'welcome'
+        )[0]
+        const WelcomeMessage = WelcomePost.content.rendered
+        this.home = WelcomeMessage
+      })
+  },
+  data() {
+    return {
+      home: '',
+      navigation_cards: {
+        Barristers: {
+          image: 'wig.jpg',
+          path: '/barristers',
+        },
+
+        'Areas of Practice': {
+          image: 'bookshelf.jpg',
+          path: '/areas-of-practice',
+        },
+        Contact: {
+          image: 'paper.jpg',
+          path: '/contact',
+        },
+      },
+    }
+  },
+}
+</script>
+
+<style lang="stylus" scoped>
+@import '../assets/styles/global.styl';
+
+h1 {
+  color: main_blue;
+}
+
+.my-container {
+  min-height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-color: rgba(23, 70, 99, 1);
+}
+
+.min_height {
+  min-height: 250px;
+}
+</style>
