@@ -1,5 +1,5 @@
 <template>
-  <div class="tw-h-full tw-flex tw-flex-col tw-justify-center">
+  <div class="tw-flex tw-flex-col tw-justify-center tw-h-full tw-px-3">
     <MyList :items="posts" :photos="true" :links="true"></MyList>
   </div>
 </template>

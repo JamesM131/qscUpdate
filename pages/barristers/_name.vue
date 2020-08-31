@@ -1,5 +1,5 @@
 <template>
-  <div class="my-wrapper tw-relative">
+  <div class="my-wrapper tw-h-full tw-relative">
     <v-btn
       outlined
       color="white"
@@ -18,7 +18,7 @@
         <img :src="image" :alt="name" class="profile-image tw-rounded" />
       </div>
       <div
-        class="tw-w-full md:tw-w-5/12 tw-h-full lg:tw-h-auto bounded-container lg:tw-overflow-y-scroll tw-ml-5"
+        class="tw-w-full md:tw-w-5/12 tw-h-full lg:tw-h-auto bounded-container lg:tw-overflow-y-auto tw-ml-5"
       >
         <h1 class="white--text">{{ name }}</h1>
         <v-flex
@@ -74,7 +74,7 @@
         </div>
       </div>
       <div
-        class="px-0 tw-w-full md:tw-w-2/12 md:tw-mt-5 md:tw-ml-5 text-xs-center tw-hidden lg:tw-block"
+        class="px-0 tw-w-full lg:tw-w-2/12 lg:tw-mt-5 md:tw-ml-5 text-xs-center tw-hidden lg:tw-block"
       >
         <div
           class="tw-flex tw-justify-center lg:tw-justify-start contact_details"

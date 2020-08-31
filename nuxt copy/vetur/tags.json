@@ -1,0 +1,50 @@
+{
+  "ImageCard": {
+    "description": "Auto imported from components/ImageCard.vue"
+  },
+  "LazyImageCard": {
+    "description": "Auto imported from components/ImageCard.vue"
+  },
+  "Logo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "LazyLogo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "MainContainer": {
+    "description": "Auto imported from components/MainContainer.vue"
+  },
+  "LazyMainContainer": {
+    "description": "Auto imported from components/MainContainer.vue"
+  },
+  "MyList": {
+    "description": "Auto imported from components/MyList.vue"
+  },
+  "LazyMyList": {
+    "description": "Auto imported from components/MyList.vue"
+  },
+  "MyListItem": {
+    "description": "Auto imported from components/MyListItem.vue"
+  },
+  "LazyMyListItem": {
+    "description": "Auto imported from components/MyListItem.vue"
+  },
+  "MyToolbar": {
+    "description": "Auto imported from components/MyToolbar.vue"
+  },
+  "LazyMyToolbar": {
+    "description": "Auto imported from components/MyToolbar.vue"
+  },
+  "NavigationCard": {
+    "description": "Auto imported from components/NavigationCard.vue"
+  },
+  "LazyNavigationCard": {
+    "description": "Auto imported from components/NavigationCard.vue"
+  },
+  "VuetifyLogo": {
+    "description": "Auto imported from components/VuetifyLogo.vue"
+  },
+  "LazyVuetifyLogo": {
+    "description": "Auto imported from components/VuetifyLogo.vue"
+  }
+}

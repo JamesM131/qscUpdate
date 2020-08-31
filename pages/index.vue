@@ -1,10 +1,10 @@
 <template>
   <div class="tw-overflow-hidden">
-    <v-row justify="center" align="center">
-      <v-col cols="auto">
+    <div class="tw-flex tw-justify-center tw-items-center">
+      <div class="mx-auto">
         <img src="~/assets/logo.png" alt="Queen's Square Chambers Logo" />
-      </v-col>
-    </v-row>
+      </div>
+    </div>
     <v-row justify="center">
       <v-col cols="9" class="pb-0 mt-4 tw-mb-4">
         <v-card class="mt-2 tw-px-10 tw-py-4 tw-bg-gray-100 min_height">
@@ -12,7 +12,7 @@
             Welcome
           </h1>
           <!-- eslint-disable  -->
-          <p class="tw-text-gray-800" v-html="home"></p>
+          <div class="tw-text-gray-800" v-html="home"></div>
           <!-- eslint-enable -->
         </v-card>
       </v-col>
@@ -35,12 +35,9 @@
 
 <script>
 import axios from 'axios'
-import NavigationCard from '~/components/NavigationCard'
+// import NavigationCard from '~/components/NavigationCard'
 
 export default {
-  components: {
-    NavigationCard,
-  },
   async fetch() {
     await axios
       .get('https://api.qsc.com.au/index.php?rest_route=/wp/v2/posts')

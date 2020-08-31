@@ -2,17 +2,17 @@
   <v-app>
     <my-toolbar></my-toolbar>
     <v-main class="with--image main--content">
-      <v-row align="center" justify="center" class="tw-h-full">
-        <v-col cols="12" class="tw-h-full">
+      <div class="tw-h-full tw-flex tw-items-center tw-justify-center">
+        <div class="justify-center tw-h-full tw-w-full">
           <transition :key="$route.path" appear name="fade" mode="out-in">
             <main-container
-              class="tw-overflow-y-auto tw-overflow-x-hidden tw-h-full"
+              class="tw-overflow-y-auto tw-overflow-x-hidden tw-h-full tw-flex tw-flex-col tw-justify-center"
             >
               <nuxt keep-alive />
             </main-container>
           </transition>
-        </v-col>
-      </v-row>
+        </div>
+      </div>
     </v-main>
   </v-app>
 </template>

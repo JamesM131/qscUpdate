@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tw-h-full tw-flex tw-flex-col tw-justify-center">
     <div
       class="tw-flex tw-items-center tw-flex-wrap tw-justify-center tw-mx-px tw-shadow-2xl tw-h-auto lg:tw-h-110 lg:tw-m-20"
       style="background-color: #12394e;"
@@ -19,7 +19,7 @@
         ></div>
       </div>
       <div
-        class="tw-w-full lg:tw-w-5/12 tw-overflow-y-scroll tw-text-justify tw-p-8 lg:tw-pr-20 lg:tw-text-left"
+        class="tw-w-full lg:tw-w-5/12 tw-overflow-y-auto tw-text-justify tw-p-8 lg:tw-pr-20 lg:tw-text-left"
       >
         <!-- eslint-disable-next-line  -->
         <div class="tw-text-white" v-html="content.about"></div>
@@ -65,11 +65,6 @@ export default {
   border-radius: 3%;
 }
 
-.main--section {
-  height: 60vh;
-  overflow-y: scroll;
-}
-
 .big-heading {
   font-size: 70px;
   font-weight: 800;
@@ -78,14 +73,6 @@ export default {
   color: #F0F8FF !important;
 }
 
-.main-card {
-  background: #12394E;
-  padding: 10px 0 0 30px;
-  height: 60vh;
-  width: 80%;
-  overflow-y: scroll;
-  justify-content: center;
-}
 
 .vertical-line {
   width: 2px;

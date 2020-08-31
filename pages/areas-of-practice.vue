@@ -1,6 +1,9 @@
 <template>
-  <div id="top-level" class="tw-flex tw-flex-col tw-items-center">
-    <div class="tw-flex tw-overflow-x-auto tw-mt-3 tw-w-11/12 tw-self-center">
+  <div
+    id="top-level"
+    class="tw-flex tw-flex-col tw-items-center tw-justify-between"
+  >
+    <div class="tw-flex tw-overflow-x-scroll tw-mt-3 tw-w-11/12 tw-self-center">
       <div
         v-for="(item, index) in areas"
         :key="index"

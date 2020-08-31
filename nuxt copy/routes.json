@@ -1,0 +1,44 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/jamesmonks/Documents/Work/Freelancing/Development/Queens Square Chambers/qscUpdate/pages/about.vue",
+    "chunkName": "pages/about"
+  },
+  {
+    "name": "areas-of-practice",
+    "path": "/areas-of-practice",
+    "component": "/Users/jamesmonks/Documents/Work/Freelancing/Development/Queens Square Chambers/qscUpdate/pages/areas-of-practice.vue",
+    "chunkName": "pages/areas-of-practice"
+  },
+  {
+    "name": "barristers",
+    "path": "/barristers",
+    "component": "/Users/jamesmonks/Documents/Work/Freelancing/Development/Queens Square Chambers/qscUpdate/pages/barristers/index.vue",
+    "chunkName": "pages/barristers/index"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "/Users/jamesmonks/Documents/Work/Freelancing/Development/Queens Square Chambers/qscUpdate/pages/contact.vue",
+    "chunkName": "pages/contact"
+  },
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/Users/jamesmonks/Documents/Work/Freelancing/Development/Queens Square Chambers/qscUpdate/pages/inspire.vue",
+    "chunkName": "pages/inspire"
+  },
+  {
+    "name": "barristers-name",
+    "path": "/barristers/:name",
+    "component": "/Users/jamesmonks/Documents/Work/Freelancing/Development/Queens Square Chambers/qscUpdate/pages/barristers/_name.vue",
+    "chunkName": "pages/barristers/_name"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/jamesmonks/Documents/Work/Freelancing/Development/Queens Square Chambers/qscUpdate/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]

@@ -23,7 +23,7 @@
       </template>
       <v-list>
         <v-list-item v-for="(name, index) in pages" :key="index">
-          <v-btn text :to="name">{{ index }}</v-btn>
+          <v-btn text :to="name" nuxt>{{ index }}</v-btn>
         </v-list-item>
       </v-list>
     </v-menu>

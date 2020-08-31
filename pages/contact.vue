@@ -1,5 +1,5 @@
 <template>
-  <div class="my-wrapper tw-relative">
+  <div class="my-wrapper tw-h-full tw-relative">
     <v-btn
       outlined
       color="white"
@@ -8,9 +8,12 @@
       >Back</v-btn
     >
 
-    <v-layout row wrap style="height: 100%;" class="tw-px-2 tw-py-10">
+    <div
+      style="height: 100%;"
+      class="tw-px-2 tw-flex tw-flex-wrap lg:tw-flex-no-wrap tw-py-10"
+    >
       <div
-        class="tw-flex tw-items-center tw-justify-center lg:tw-justify-start lg:tw-w-1/3 tw-w-full"
+        class="tw-flex tw-flex-wrap lg:tw-flex-no-wrap tw-items-center tw-justify-center lg:tw-justify-start lg:tw-w-1/3 tw-w-full"
       >
         <img
           :src="clerk_image"
@@ -18,7 +21,9 @@
           class="profile-image tw-rounded"
         />
       </div>
-      <div class="bounded-container tw-ml-5 tw-w-full lg:tw-w-4/12">
+      <div
+        class="tw-w-full lg:tw-w-4/12 tw-h-full lg:tw-h-auto bounded-container lg:tw-overflow-y-auto tw-ml-5"
+      >
         <h1 class="white--text">{{ clerk_name }}</h1>
 
         <div class="my-wrapper tw-mt-5 tw-pr-5">
@@ -127,7 +132,7 @@
           </div>
         </div>
       </div>
-    </v-layout>
+    </div>
   </div>
 </template>
 
@@ -217,7 +222,7 @@ export default {
       max-height: 70vh;
     }
 
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   & >>> li::before {
