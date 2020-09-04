@@ -1,54 +1,55 @@
 <template>
-  <div class="my-wrapper tw-h-full tw-relative">
+  <div class="tw-relative tw-h-full my-wrapper">
     <v-btn
       outlined
       color="white"
       to="/barristers"
-      class="tw-absolute tw-top-0 tw-left-0"
+      class="tw-absolute tw-top-0 tw-left-0 tw-m-2"
       >Back</v-btn
     >
 
     <div
       style="height: 100%;"
-      class="tw-flex tw-flex-wrap md:tw-pr-10 tw-px-2 tw-py-10"
+      class="tw-flex tw-flex-wrap tw-px-2 tw-py-10 md:tw-pr-10"
     >
       <div
-        class="tw-flex tw-items-center tw-justify-center lg:tw-justify-start lg:tw-w-1/3 tw-w-full"
+        class="tw-flex tw-items-center tw-justify-center tw-w-full lg:tw-justify-start lg:tw-w-1/3"
       >
-        <img :src="image" :alt="name" class="profile-image tw-rounded" />
+        <img :src="image" :alt="name" class="tw-rounded profile-image" />
       </div>
       <div
-        class="tw-w-full md:tw-w-5/12 tw-h-full lg:tw-h-auto bounded-container lg:tw-overflow-y-auto tw-ml-5"
+        class="tw-w-full tw-h-full tw-ml-5 md:tw-w-5/12 lg:tw-h-auto bounded-container lg:tw-overflow-y-auto"
       >
         <h1 class="white--text">{{ name }}</h1>
-        <v-flex
-          xs12
-          md2
-          class="px-0 md:tw-mt-5 md:tw-ml-5 text-xs-center lg:tw-hidden tw-block"
+        <div
+          class="tw-block tw-w-full md:tw-w-2/12 px-0 md:tw-mt-5 md:tw-ml-5 text-xs-center lg:tw-hidden"
         >
           <div
             class="tw-flex tw-justify-center lg:tw-justify-start contact_details"
           >
             <div class="tw-mr-2">
-              <h2 class="white--text text-xs-right tw-text-lg">Email:</h2>
-              <h2 class="white--text text-xs-right tw-text-lg">Phone:</h2>
-              <h2 class="white--text text-xs-right tw-text-lg">Fax:</h2>
+              <h2 class="tw-text-lg white--text text-xs-right">Email:</h2>
+              <h2 class="tw-text-lg white--text text-xs-right">Phone:</h2>
+              <h2 class="tw-text-lg white--text text-xs-right">Fax:</h2>
             </div>
             <div>
-              <h2 class="white--text text-xs-left tw-text-lg">{{ email }}</h2>
-              <h2 class="white--text text-xs-left tw-text-lg">{{ phone }}</h2>
-              <h2 class="white--text text-xs-left tw-text-lg">{{ fax }}</h2>
+              <h2 class="tw-text-lg white--text text-xs-left">{{ email }}</h2>
+              <h2 class="tw-text-lg white--text text-xs-left">{{ phone }}</h2>
+              <h2 class="tw-text-lg white--text text-xs-left">{{ fax }}</h2>
             </div>
           </div>
-          <v-layout align-top justify-center row wrap style="height: 70%;">
+          <div
+            style="height: 70%;"
+            class="tw-flex tw-flex-wrap tw-justify-center tw-align-top"
+          >
             <v-btn large class="my-5 make--primary" @click="mail"
               >Contact Me</v-btn
             >
-          </v-layout>
-        </v-flex>
+          </div>
+        </div>
 
         <div v-if="practice_areas.length" class="tw-mt-5">
-          <h2 v-if="practice_areas.length" class="white--text tw-font-bold">
+          <h2 v-if="practice_areas.length" class="tw-font-bold white--text">
             Areas of Practice
           </h2>
 
@@ -64,7 +65,7 @@
           </div>
         </div>
 
-        <div class="my-wrapper tw-mt-5 tw-pr-5">
+        <div class="tw-pr-5 tw-mt-5 my-wrapper">
           <!-- eslint-disable  -->
           <div
             class="tw-text-white tw-whitespace-pre-wrap"
@@ -74,27 +75,30 @@
         </div>
       </div>
       <div
-        class="px-0 tw-w-full lg:tw-w-2/12 lg:tw-mt-5 md:tw-ml-5 text-xs-center tw-hidden lg:tw-block"
+        class="tw-hidden tw-w-full px-0 lg:tw-w-2/12 lg:tw-mt-5 md:tw-ml-5 text-xs-center lg:tw-block"
       >
         <div
           class="tw-flex tw-justify-center lg:tw-justify-start contact_details"
         >
           <div class="tw-mr-2">
-            <h2 class="white--text text-xs-right tw-text-lg">Email:</h2>
-            <h2 class="white--text text-xs-right tw-text-lg">Phone:</h2>
-            <h2 class="white--text text-xs-right tw-text-lg">Fax:</h2>
+            <h2 class="tw-text-lg white--text text-xs-right">Email:</h2>
+            <h2 class="tw-text-lg white--text text-xs-right">Phone:</h2>
+            <h2 class="tw-text-lg white--text text-xs-right">Fax:</h2>
           </div>
           <div>
-            <h2 class="white--text text-xs-left tw-text-lg">{{ email }}</h2>
-            <h2 class="white--text text-xs-left tw-text-lg">{{ phone }}</h2>
-            <h2 class="white--text text-xs-left tw-text-lg">{{ fax }}</h2>
+            <h2 class="tw-text-lg white--text text-xs-left">{{ email }}</h2>
+            <h2 class="tw-text-lg white--text text-xs-left">{{ phone }}</h2>
+            <h2 class="tw-text-lg white--text text-xs-left">{{ fax }}</h2>
           </div>
         </div>
-        <v-layout align-top justify-center row wrap style="height: 70%;">
+        <div
+          style="height: 70%;"
+          class="tw-flex tw-flex-wrap tw-justify-center tw-align-top"
+        >
           <v-btn large class="my-5 make--primary" @click="mail"
             >Contact Me</v-btn
           >
-        </v-layout>
+        </div>
       </div>
     </div>
   </div>

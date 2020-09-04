@@ -3,14 +3,14 @@
     id="top-level"
     class="tw-flex tw-flex-col tw-items-center tw-justify-between"
   >
-    <div class="tw-flex tw-overflow-x-scroll tw-mt-3 tw-w-11/12 tw-self-center">
+    <div class="tw-flex tw-w-11/12 tw-mt-3 tw-overflow-x-scroll">
       <div
         v-for="(item, index) in areas"
         :key="index"
         class="px-2 pt-0 pb-3 mx-0 mt-0 mb-3 item_box"
       >
         <h1
-          class="px-0 mx-0 area_text make--pointer"
+          class="px-0 mx-0 area_text make--pointer hover:tw-text-white"
           :class="{ strong_text: active_area === item }"
           @click="change_area(item)"
         >
@@ -24,7 +24,7 @@
       :items="barristers_for_area2"
       :photos="true"
       :links="true"
-      class="tw-w-full tw-self-center tw-mt-8"
+      class="tw-self-center tw-w-full tw-mt-2"
     ></MyList>
   </div>
 </template>

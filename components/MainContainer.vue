@@ -1,19 +1,29 @@
 <template>
   <v-container class="tw-py-10 container-important">
-    <v-row
-      justify="center"
-      align="center"
-      class="tw-h-full tw-overflow-auto make--secondary"
+    <div
+      class="tw-flex tw-items-center tw-justify-center tw-h-full tw-overflow-auto make--secondary"
     >
-      <v-col cols="12" class="tw-h-full">
+      <div
+        class="tw-flex tw-flex-col tw-w-full tw-h-full"
+        :class="{
+          'tw-justify-top': justify_top,
+          'tw-justify-center': !justify_top,
+        }"
+      >
         <slot></slot>
-      </v-col>
-    </v-row>
+      </div>
+    </div>
   </v-container>
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    justify_top() {
+      return this.$route.path.includes('areas-of-practice')
+    },
+  },
+}
 </script>
 
 <style scoped lang="stylus">

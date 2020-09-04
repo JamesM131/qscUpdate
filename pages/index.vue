@@ -1,35 +1,37 @@
 <template>
   <div class="tw-overflow-hidden">
-    <div class="tw-flex tw-justify-center tw-items-center">
+    <div class="tw-flex tw-items-center tw-justify-center">
       <div class="mx-auto">
         <img src="~/assets/logo.png" alt="Queen's Square Chambers Logo" />
       </div>
     </div>
-    <v-row justify="center">
-      <v-col cols="9" class="pb-0 mt-4 tw-mb-4">
-        <v-card class="mt-2 tw-px-10 tw-py-4 tw-bg-gray-100 min_height">
-          <h1 class="text-center tw-font-extrabold tw-text-2xl tw-mb-3">
+
+    <div class="tw-flex tw-justify-center">
+      <div class="tw-w-9/12 tw-pb-0 tw-mt-4 tw-mb-4">
+        <div
+          class="tw-px-10 tw-py-4 tw-mt-2 tw-bg-gray-100 tw-rounded tw-shadow min_height"
+        >
+          <h1 class="tw-mb-3 tw-text-2xl tw-font-extrabold text-center">
             Welcome
           </h1>
           <!-- eslint-disable  -->
           <div class="tw-text-gray-800" v-html="home"></div>
           <!-- eslint-enable -->
-        </v-card>
-      </v-col>
-    </v-row>
-    <v-row class="tw-pb-4" align="center" justify="center">
-      <v-col
+        </div>
+      </div>
+    </div>
+
+    <div class="tw-flex tw-items-center tw-justify-center tw-pb-4">
+      <div
         v-for="(card, key) in navigation_cards"
         :key="key"
-        class="tw-px-10"
-        cols="12"
-        md="4"
+        class="tw-w-full tw-px-10 lg:tw-w-4/12"
       >
         <navigation-card :image="card.image" :path="card.path">{{
           key
         }}</navigation-card>
-      </v-col>
-    </v-row>
+      </div>
+    </div>
   </div>
 </template>
 

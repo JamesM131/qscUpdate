@@ -1,35 +1,29 @@
 <template>
   <div>
-    <v-row justify="space-around" align="center">
-      <v-col
+    <div class="tw-flex tw-flex-wrap tw-items-center tw-justify-around">
+      <div
         v-for="(item, index) in items"
         :key="index"
-        cols="6"
-        sm="3"
-        class="hover:tw-bg-blue-800 tw-cursor-pointer tw-px-4 tw-pb-1 tw-pt-3 tw-rounded"
+        class="tw-w-1/2 tw-px-4 tw-pt-3 tw-pb-1 tw-rounded tw-cursor-pointer lg:tw-w-1/4 hover:tw-bg-blue-800"
         @click="view_profile(item.path)"
       >
         <div class="tw-flex tw-flex-col tw-items-center tw-justify-center">
           <image-card :image-src="item.image_src" :alt="item.name"></image-card>
-
-          <my-list-item
-            :item="item.name"
-            class="make--pointer tw-text-center tw-mt-3"
-          ></my-list-item>
+          <div class="tw-mt-3 tw-text-center make--pointer">
+            <p class="tw-font-serif tw-text-white">{{ item.name }}</p>
+          </div>
         </div>
-      </v-col>
-    </v-row>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import MyListItem from '@/components/MyListItem.vue'
 import ImageCard from '@/components/ImageCard.vue'
 
 export default {
   name: 'MyList',
   components: {
-    'my-list-item': MyListItem,
     'image-card': ImageCard,
   },
   props: {
