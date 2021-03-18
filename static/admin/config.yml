@@ -1,0 +1,97 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: static/uploads
+public_folder: /uploads
+
+collections:
+  - label: 'General Info'
+    name: 'generalInfo'
+    files:
+      - label: 'Schools'
+        name: 'schools'
+        file: 'content/generalInfo.yaml'
+        fields:
+          - {
+              label: 'School List',
+              name: 'schools',
+              widget: list,
+              field: { label: 'School', name: 'school', widget: 'string' },
+            }
+
+  - label: 'Jobs'
+    name: 'jobs'
+    folder: 'content/jobs'
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+
+  - label: 'Clothes'
+    name: 'clothes'
+    folder: 'content/clothes'
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: 'Category', name: 'category', widget: 'select', options: ['head', 'body', 'legs', 'feet', 'attributes']}
+
+  - label: 'Tasks (Keep/Remove)'
+    name: 'tasks'
+    folder: 'content/tasks'
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+
+  - label: 'Pages'
+    name: 'pages'
+    files:
+      - label: 'Welcome'
+        name: 'welcome'
+        file: 'content/welcome.yaml'
+        editor:
+          preview: false
+        fields:
+          - { label: 'Title', name: 'main-label', widget: string }
+          - {
+              label: 'What would I need to do?',
+              name: 'what',
+              widget: markdown,
+            }
+          - { label: 'Why are you asking me', name: 'why', widget: markdown }
+          - { label: 'This is voluntary', name: 'voluntary', widget: markdown }
+          - {
+              label: 'This is confidential',
+              name: 'confidential',
+              widget: markdown,
+            }
+          - { label: 'Contact', name: 'contact', widget: string }
+          - { label: 'Audio', name: 'audio', widget: file}
+    
+      - label: 'JobHappy'
+        name: 'jobs' 
+        file: 'content/job-happy.yaml'
+        fields: 
+          - {label: 'Title', name: 'title', widget: string}
+          - {label: 'Instructions', name: 'instructions', widget: string}
+          - {label: 'Audio', name: 'audio', widget: file}
+
+      - label: 'Info'
+        name: 'info' 
+        file: 'content/info.yaml'
+        fields: 
+          - {label: 'Title', name: 'title', widget: string}
+          - {label: 'Instructions', name: 'instructions', widget: string}
+          - {label: 'Audio', name: 'audio', widget: file}
+
+      - label: 'Faces'
+        name: 'faces' 
+        file: 'content/faces.yaml'
+        fields: 
+          - {label: 'Title', name: 'title', widget: string}
+          - {label: 'Instructions', name: 'instructions', widget: string}
+          - {label: 'Question 1', name: 'question-1', widget: string}
+          - {label: 'Question 2', name: 'question-2', widget: string}
+          - {label: 'Audio', name: 'audio', widget: file}
