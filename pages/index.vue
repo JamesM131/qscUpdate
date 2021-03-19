@@ -11,7 +11,7 @@
         <div
           class="tw-px-10 tw-py-4 tw-mt-2 tw-bg-gray-100 tw-rounded tw-shadow min_height"
         >
-          <h1 class="tw-mb-3 tw-text-2xl tw-font-extrabold text-center">
+          <h1 class="text-center tw-mb-3 tw-text-2xl tw-font-extrabold">
             Welcome
           </h1>
           <!-- eslint-disable  -->
@@ -51,6 +51,7 @@ export default {
         this.home = WelcomeMessage
       })
   },
+
   data() {
     return {
       home: '',
@@ -69,6 +70,13 @@ export default {
           path: '/contact',
         },
       },
+    }
+  },
+  head() {
+    return {
+      script: [
+        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+      ],
     }
   },
 }
