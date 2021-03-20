@@ -51,7 +51,6 @@ export default {
         this.home = WelcomeMessage
       })
   },
-
   data() {
     return {
       home: '',
